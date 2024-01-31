@@ -1,5 +1,5 @@
 /***************** Item Page CSS **************************/
-/*.action_container {
+.action_container {
     text-decoration: none;
 }
 a.action_container:link {
@@ -69,7 +69,7 @@ a.action_container:link {
     font-size: 20px;
     cursor: pointer;
 }
-.bag-items {
+.cart-item-count {
     background-color: #f16565;
     white-space: nowrap;
     text-align: center;
@@ -84,7 +84,7 @@ a.action_container:link {
     top: -44px;
     font-weight: 700;
     cursor: pointer;
-}*/
+}
 
 * {
     margin: 0;
@@ -189,9 +189,10 @@ header {
     font-weight: 700;
 }
 
-.category-items {
+.category-items, .items-container {
     width: 80%;
     margin: 50px 10%;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -230,4 +231,82 @@ header {
     color: #94969f;
     text-align: end;
     padding: 15px;
+}
+
+.items-container{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.item-container{
+    width: 200px;
+    margin: 25px;
+}
+.item-image{
+    width: 100%;
+    border-radius: 15px;
+}
+.rating{
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 800;
+
+}
+.company-name{
+    line-height: 1;
+    margin-top: 7px;
+    
+    font-size: 17px;
+    font-weight: 650;
+    color: #282c3f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.item-name{
+    line-height: 1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #282c3f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+.price{
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 15px;
+    color: #282c3f;
+    white-space: nowrap;
+}
+.current-price{
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+}
+.original-price{
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #282c3f;
+}
+.discount{
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #974400;
+}
+.btn-add-cart{
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #00a308;
+    width: 80%;
+    margin: 10px 17px;
+    padding: 5px 15px;
 }
