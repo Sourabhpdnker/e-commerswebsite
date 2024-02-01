@@ -1,7 +1,8 @@
 let addToCartItem =[];
 displayItemsOnHome();
 function addToCart(itemId) {
-    addToCartItem.push(itemId)
+    addToCartItem.push(itemId);
+    
     cartItemCount();
 }
 function cartItemCount(){
@@ -27,7 +28,7 @@ function displayItemsOnHome() {
     </div>
     <div class="price">
         <span class="current-price">Rs ${item.current_price}</span>
-        <span class="original-price">Rs${item.origial_price}</span>
+        <span class="original-price">Rs${item.original_price}</span>
         <span class="discount">(${item.discount_percentage}% OFF)</span>
     </div>
     <button class="btn-add-cart" onclick="addToCart(${item.id})">Add to Cart</button>
