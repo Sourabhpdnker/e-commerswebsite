@@ -1,18 +1,36 @@
-let addToCartItem =[];
-displayItemsOnHome();
+let addToCartItem;
+onLoad();
+
+function onLoad(){
+    let cartItemStr = localStorage.getItem('addToCartItem');
+    addToCartItem = cartItemStr ? JSON.parse(cartItemStr) : [];
+    displayItemsOnHome();
+    cartItemCount();
+}
+
 function addToCart(itemId) {
     addToCartItem.push(itemId);
-    
+    localStorage.setItem('addToCartItem',JSON.stringify(addToCartItem));
     cartItemCount();
 }
 function cartItemCount(){
     let cartItemCountElement = document.querySelector('.cart-item-count');
-    cartItemCountElement.innerText = addToCartItem.length;
+    if (addToCartItem.length > 0){
+        cartItemCountElement.style.visibility = "visible";
+        cartItemCountElement.innerText = addToCartItem.length;
+    }
+    else{
+        cartItemCountElement.style.visibility ='hidden';
+    }
+    
 }
 
 
 function displayItemsOnHome() {
     let itemeContainerElement = document.querySelector(".items-container");
+    if (!itemeContainerElement){
+        return;
+    }
     let innerHtml = ``;
     item.forEach(item => {
         innerHtml += `<div class="item-container">
