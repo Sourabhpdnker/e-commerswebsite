@@ -1,17 +1,16 @@
 .bag-items-container {
   display: inline-block;
-  width: 64%;
+  width: 50%;
   padding-right: 20px;
-  border-right: 1px solid #eaeaec;
   padding-top: 32px;
   color: #282c3f;
   font-size: 13px;
-  line-height: 1.42857143;
 }
 
 .bag-page {
-  width: 75%;
-  margin-left: 12.5%;
+  width: 85%;
+  margin-left: 10%;
+  display: inline-block;
 }
 
 .bag-summary {
@@ -22,6 +21,7 @@
   color: #282c3f;
   font-size: 13px;
   line-height: 1.42857143;
+  align-items: center;
 }
 
 .bag-details-container {
