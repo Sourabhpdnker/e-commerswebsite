@@ -24,8 +24,6 @@ function cartItemCount(){
     }
     
 }
-
-
 function displayItemsOnHome() {
     let itemeContainerElement = document.querySelector(".items-container");
     if (!itemeContainerElement){

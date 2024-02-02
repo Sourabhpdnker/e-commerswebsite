@@ -1,25 +1,27 @@
 
-let bagItemObj;
+let bagItemObjects;
 onLoad();
 function onLoad(){
-    loadBagItemObj();
+    loadBagItemObjects();
     displayItemsOnCart();
 }
-function loadBagItemObj(){
-    bagItemObj = Items.map(itemId => {
-        for(let i=0;i< displayItemsOnCart.length; i++){
-            if (itemId == items[i].id){
-                return item[i];
-            }
+function loadBagItemObjects() {
+    console.log(addToCartItem);
+    bagItemObjects = addToCartItem.map(itemId => {
+      for (let i = 0; i < item.length; i++) {
+        if (itemId == item[i].id) {
+          return item[i];
         }
+      }
     });
-    console.log(bagItemObj);
-}
-console.log(addToCartItem);
+    console.log(bagItemObjects);
+  }
 function displayItemsOnCart(){
     let containerElement = document.querySelector('.bag-items-container');
-
-    containerElement.innerHTML= `<div class="bag-item-container">
+    //containerElement.innerHTML= ` `;
+}
+function ganareteItemHtml(item){
+    return`<div class="bag-item-container">
     <div class="item-left-part">
         <img class="bag-item-img" src="../images/4.jpg">
     </div>
@@ -41,9 +43,5 @@ function displayItemsOnCart(){
     </div>
 
     <div class="remove-from-cart">X</div>
-</div> `;
-}
-
-function generateIntemhtml(){
-
+</div>`;
 }
